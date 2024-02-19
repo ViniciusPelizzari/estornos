@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.controleestorno.estornos"},{"l":"com.controleestorno.estornos.controllers"},{"l":"com.controleestorno.estornos.entities"},{"l":"com.controleestorno.estornos.repositories"},{"l":"com.controleestorno.estornos.service"}];updateSearchResults();
