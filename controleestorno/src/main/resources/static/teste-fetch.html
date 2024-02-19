@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interface de Estornos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #resultado {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interface de Estornos</h1>
+    <button onclick="buscarTodosEstornos()">Buscar Todos os Estornos</button>
+    <div id="resultado"></div>
+
+    <script>
+        function buscarTodosEstornos() {
+            fetch('http://localhost:8080/estornos/3')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('resultado').innerText = JSON.stringify(data);
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+    </script>
+</body>
+</html>

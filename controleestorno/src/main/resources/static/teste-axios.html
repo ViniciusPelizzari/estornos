@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interface de Estornos</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            #resultado {
+                margin-top: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Interface de Estornos</h1>
+        <button onclick="buscarTodosEstornos()">Buscar Todos os Estornos</button>
+        <div id="resultado"></div>
+
+        <script>
+            function buscarTodosEstornos() {
+                axios.get('http://localhost:8080/estornos/3')
+                    .then(response => {
+                        document.getElementById('resultado').innerText = JSON.stringify(response.data);
+                    })
+                    .catch(error => console.error('Erro:', error));
+            }
+        </script>
+    </body>
+</html>
